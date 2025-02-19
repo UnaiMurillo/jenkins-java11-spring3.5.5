@@ -25,7 +25,7 @@ public class HelloControllerTest {
 
     @Test
     public void holaUser() throws Exception {
-        ResponseEntity<String> response = template.getForEntity("/hola?nombre=EMSAlumno ERROR", String.class);
+        ResponseEntity<String> response = template.getForEntity("/hola?nombre=EMSAlumno", String.class);
 
         // check that the body contains a <p> tag with the text "¡Hola EMSAlumno!"
         assertThat(response.getBody()).contains("<p>¡Hola EMSAlumno!</p>");
